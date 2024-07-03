@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.dFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px 20px 50px;
+    box-sizing: border-box;
+    background-color: #272b34;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+}
+nav .logo{
+        font-size: 30px;
+        text-transform:uppercase;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+         margin: 0;
+         padding: 0;
+         list-style-type: none;
+}
+nav li{
+             font-size: 14px;
+             margin-left:15px;
+            padding: 10px;
+            box-sizing: border-box;
+            color: rgba(white,.7);
+            cursor:pointer;
+
+         }
+nav .search{
+    color: rgba(white,.7);
+}
+nav .search .fa{
+    cursor:pointer;
+}
+
+nav .search .fa +.fa{
+    margin-left: 15px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    margin: 50px auto;
+    padding: 50px 0 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main h3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: tomato;
+    font-size: 10.5vw;
+}
+
+.main .card{
+    width: 30%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transform: scale(.8);
+    transition: all .3s ease-in-out;
+    margin-bottom: 50px;
+}
+
+.main .card .card_img{
+    margin-top: -5vw;
+    
+}
+.main .card .card_img img{
+    width: 200px;
+    height: 300px;
+}
+
+.main .card .card_img .card_header{
+    width: 30%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 25px 0;
+}
+
+.main .card .card_img .card_header h2{
+    font-size: 18px;
+}
+
+.main .card .card_img .card_header p{
+    font-size: 14px;
+    text-align: center;
+    color:rgba(white,.3);
+    margin: 8px 0;
+}
+
+.main .card:hover{
+    background-color: rgb(154, 51, 51);
+    transform: scale(1.1);
+    cursor: pointer;
+}

@@ -1,0 +1,98 @@
+import React from "react";
+import './App.css';
+class App extends React.Component {
+   
+    // Constructor 
+    constructor(props) {
+        super(props);
+   
+        this.state = {
+            items: [],
+            DataisLoaded: false
+        };
+    }
+   
+    // ComponentDidMount is used to
+    // execute the code 
+    componentDidMount() {
+        fetch(
+"https://fakestoreapi.com/products")
+            .then((res) => res.json())
+            .then((json) => {
+                this.setState({
+                    items: json,
+                    DataisLoaded: true
+                });
+            })
+    }
+    render() {
+        const { DataisLoaded, items } = this.state;
+        if (!DataisLoaded) return <div>
+            <h1> Please wait some time.... </h1> </div> ;
+   
+        return (
+        <div className = "App">
+           <h1> Fetch data from an api in react </h1> 
+           <div className="tag">{
+              
+                items.map((item) => ( 
+                <ol key = { item.id } >
+                  <img src={item.image}alt=""/>
+                    <h2>Title: { item.title }</h2>
+                    <span>Price: { item.price }</span>
+                    <p>Description: { item.description }</p>
+                    Category: { item.category }
+                                        
+                </ol>
+                ))
+            }
+            </div>
+        </div>
+    );
+}
+}
+   
+export default App;
+
+
+const Content=()=>{
+    console.log(product);
+    const listItems =product.map((item)=>
+    <div className="card" key={item.id}>
+        <div className='card_img'>
+            <img src={item.image}/>
+        </div>
+        <div className='card_header'>
+            <h1>{item.title}</h1>
+            <h2>{item.price}</h2>
+            <p>{item.description}</p>
+            <h4>{item.category}</h4>
+
+            
+        </div>
+
+    </div>
+);
+return( 
+    <div className='card_content'>
+        {listItems}
+    </div>)
+}
+export default Content;
+
+import React from 'react'
+import './App.css';
+import Content from './content.js'
+import Header from './header.js'
+import Footer from './footer.js'
+function App(){
+  return (
+    <div className="container">
+        <Header />
+        <Content />
+        <Footer />
+    </div>
+  );
+}
+
+export default App;

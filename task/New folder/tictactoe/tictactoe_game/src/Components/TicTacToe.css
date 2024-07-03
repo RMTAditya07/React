@@ -1,0 +1,39 @@
+table td{
+    border: solid rgb(5, 13, 100);
+    width: 100px;
+    height:100px;
+}
+*{
+    background-color: rgb(25, 40, 97);
+}
+table{
+    font-size: large;
+    background-color: rgb(76, 126, 170);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    margin: auto;
+}
+.btn{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(146, 123, 163);
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+}
+.winner{
+    color: rgb(150, 150, 181);
+}
+.line{
+    line-height: 100px;
+    color: white;
+}
+.line>h1{
+    color: rgb(188, 159, 210);
+}

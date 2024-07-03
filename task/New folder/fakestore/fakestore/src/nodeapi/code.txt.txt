@@ -1,0 +1,33 @@
+bring in posts
+-----------------
+const postRoutes=require('./routes/post')
+app.get("/",postRoutes.getPosts);
+
+exports.getPosts=(req,res)=>{
+	res.send("hello express");
+}
+_____________________________________________________________
+MIDDLE WARE
+------------
+
+const mymiddleware=(res,req,next)=>{
+	console.log("my middleware")
+	next()
+}
+
+//middleware
+app.use(morgan("dev"));
+app.use(mymiddleware);
+
+_____________________________________________________________
+MONGO DB CONNNECT
+------------------
+//db
+mongoose.connect(process.env.MONGO_URI)
+.then(()=>console.log('DB connected'))
+
+mongoose.connection.on('error',err=>{
+	console.log(`DB connection error:${err.message}`)
+})
+_____________________________________________________________
+

@@ -1,0 +1,27 @@
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+
+import ErrorPage from "./Pages/ErrorPage";
+
+function App() {
+  return (
+    <Router>
+      <nav>
+        <Link to="/"> Home </Link>
+        <Link to="/about"> About </Link>
+   
+      </nav>
+      <Switch>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+       
+        <Route path="*" element={<ErrorPage />} />
+      </Switch>
+      <div> Foooter </div>
+    </Router>
+  );
+}
+
+export default App;

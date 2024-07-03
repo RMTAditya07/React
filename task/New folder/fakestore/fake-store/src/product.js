@@ -1,0 +1,52 @@
+const product =[
+    {
+        id:1,
+        title:'aditions',
+        price:'4.50',
+        category:'mathes',
+        description:'maths',
+        image:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg'
+    },
+    {
+        id:2,
+        title:'madhus',
+        price:'452.50',
+        category:'mathes',
+        description:'maths',
+        image:'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg'
+    },
+    {
+        id:3,
+        title:'sathis',
+        price:'457.50',
+        category:'mathes',
+        description:'maths',
+        image:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg'
+    },
+    {
+        id:4,
+        title:'vicky',
+        price:'42.50',
+        category:'mathes',
+        description:'maths',
+        image:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg'
+    },
+    {
+        id:5,
+        title:'aloogon',
+        price:'78.50',
+        category:'mathes',
+        description:'maths',
+        image:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg'
+    },
+    {
+        id:6,
+        title:'subtract',
+        price:'85.50',
+        category:'mathes',
+        description:'maths',
+        image:'https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg'
+    }
+]
+
+export default product;
